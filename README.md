@@ -1,8 +1,8 @@
-# UART-SystemVerilog-Testbench
+# UART-SystemVerilog-Design and Testbench
 
-This repository contains a SystemVerilog testbench for verifying a UART (Universal Asynchronous Receiver-Transmitter) design. The testbench follows a modular verification methodology, using classes for transaction generation, driving, monitoring, and scoreboarding, orchestrated by an environment class.
+This repository contains a SystemVerilog implementation of a UART (Universal Asynchronous Receiver-Transmitter) module, designed to facilitate serial communication at a configurable clock frequency and baud rate. The UART module supports both transmission (TX) and reception (RX) of 8-bit data with no parity and one stop bit, operating at a default clock frequency of 1 MHz and a baud rate of 9600.
 
-## Overview
+## Overview of Testbench
 
 The testbench is designed to verify a UART module (`uart_top`) with a clock frequency of 1 MHz and a baud rate of 9600. It includes:
 - **Transaction Class**: Defines the data structure for UART transactions (read/write operations, data, and control signals).
