@@ -23,7 +23,7 @@ module tb; // Testbench module definition
     
   initial begin // Main testbench control block
     env = new(vif); // Create environment instance, passing the interface
-    env.gen.count = 3; // Set generator to produce 5 transactions
+    env.gen.count = 5; // Set generator to produce 5 transactions
     env.run(); // Start the environment to execute the test
   end
       
