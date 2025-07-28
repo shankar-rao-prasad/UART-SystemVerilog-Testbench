@@ -18,7 +18,7 @@ module tb; // Testbench module definition
   end
     
   always #10 vif.clk <= ~vif.clk; // Generate 50MHz clock (20ns period) by toggling every 10ns
-     assign vif.rx =vif.tx;
+    // assign vif.rx =vif.tx; no need bcz already connected in driver
   environment env; // Declare environment object to manage test components (generator, driver, monitor, scoreboard)
     
   initial begin // Main testbench control block
