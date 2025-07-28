@@ -60,6 +60,9 @@ class driver;
         vif.newd <= 1'b0; // Ensure no new data signal
         @(posedge vif.uclkrx); // Wait for next clock edge
         for(int i=0; i<=7; i++) begin // Loop to receive 8 data bits
+          
+           vif.rx <= tr.dintx[i];
+          
           @(posedge vif.uclkrx); // Wait for each receive clock edge
          //vif.rx <= $urandom; // Drive random data bit to RX
           datarx[i] = vif.rx; // Capture received bit
